@@ -1,2 +1,2 @@
 # Jack-World
-An AI word for Jack
+An AI world for Jack
