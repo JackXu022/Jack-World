@@ -28,14 +28,14 @@ const siteContent = {
   },
   about: {
     heading: "About",
-    title: "A concise profile",
+    title: "How I work.",
     text:
       "I work across backend infrastructure, security-focused platform engineering, and product delivery. My recent work centers on Microsoft 365 access management, just-in-time and just-enough access concepts, and a Graph API serving more than 50,000 requests a day end-to-end.",
     tags: ["Access management", "Distributed systems", "API ownership", "Production pragmatism"],
   },
   education: {
     heading: "Education",
-    title: "Academic foundation",
+    title: "Built on fundamentals.",
     items: [
       {
         school: "Cornell University",
@@ -63,7 +63,7 @@ const siteContent = {
   },
   experience: {
     heading: "Experience",
-    title: "Resume timeline",
+    title: "Where I’ve worked.",
     items: [
       {
         role: "Software Engineer II",
@@ -101,7 +101,7 @@ const siteContent = {
   },
   projects: {
     heading: "Projects",
-    title: "Selected work",
+    title: "Things I’ve built.",
     items: [
       {
         name: "Classification App on AWS",
@@ -128,7 +128,7 @@ const siteContent = {
   },
   skills: {
     heading: "Skills",
-    title: "What I use",
+    title: "Tools I use.",
     items: [
       ".NET",
       "C#",
@@ -156,9 +156,9 @@ const siteContent = {
   },
   contact: {
     heading: "Contact",
-    title: "Let’s build something useful.",
+    title: "Let’s connect.",
     text:
-      "The best path is email or LinkedIn.",
+      "Email is the best way to reach me. LinkedIn works as well for recruiting and professional contact.",
     links: [
       { label: "Email", value: "jackxu039@gmail.com", href: "mailto:jackxu039@gmail.com" },
       { label: "LinkedIn", value: "linkedin.com/in/zhaopeng-xu-04b041192", href: "https://www.linkedin.com/in/zhaopeng-xu-04b041192" },
@@ -220,10 +220,10 @@ function renderHero(hero) {
 
 function renderSectionLabel(section) {
   return `
-    <div class="panel section-label">
+    <header class="section-header">
       <span>${section.heading}</span>
       <h2>${section.title}</h2>
-    </div>
+    </header>
   `;
 }
 
@@ -345,11 +345,13 @@ function renderSkills(section) {
 function renderContact(section) {
   return `
     <section class="section" id="contact">
-      ${renderSectionLabel(section)}
+      <header class="section-header section-header-compact">
+        <span>${section.heading}</span>
+        <h2>${section.title}</h2>
+      </header>
       <div class="section-content fade-up delay-3">
         <article class="panel card contact-card">
           <div class="contact-copy">
-            <h3>${section.title}</h3>
             <p class="lead">${section.text}</p>
           </div>
           <div class="contact-actions">
